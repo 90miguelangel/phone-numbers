@@ -1,7 +1,7 @@
 class PhonesController < ApplicationController
 
   def index
-    render json: Phone.all
+    render json: Phone.page(params[:page])
   end
 
   def create
